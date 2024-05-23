@@ -1,0 +1,7 @@
+dev\jay\csadverts\CSAdverts.class
+dev\jay\csadverts\commands\managers\coolDown.class
+dev\jay\csadverts\commands\sub\set.class
+dev\jay\csadverts\database\dbq.class
+dev\jay\csadverts\commands\advertise.class
+dev\jay\csadverts\database\data.class
+dev\jay\csadverts\commands\managers\timeFormat.class

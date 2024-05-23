@@ -1,0 +1,10 @@
+name: CSAdverts
+version: '1.0'
+main: dev.jay.csadverts.CSAdverts
+api-version: '1.20'
+authors: [jayie, sleepy, qwml]
+description: Advertise your pwarps  and twitch streams!
+commands:
+  advertise:
+    description: Main command
+    aliases: [csadv, advert, adverts, adv, csadvertise, csadverts]

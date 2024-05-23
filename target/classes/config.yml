@@ -1,0 +1,57 @@
+#
+#
+#
+# CSAdverts - Advertise your twitch or pwarps!
+#           for Cubesurvival by qwml
+#
+#
+#
+
+# Placeholders:-
+# %player% - Player name.
+# %message% - Players custom message.
+# %timeleft% - show hours, minutes and seconds left on cooldown.
+
+# Hex codes are support @ &#(6digitcode)
+
+
+# DO NOT CHANGE.
+ver: 1.0
+
+# Main plugin settings.
+Plugin:
+  Prefix: '&8[&6&lCS&8] '
+  Database:
+    # options: h2, mysql.
+    Type: 'H2'
+    Address: 'localhost'
+    Port: '3306'
+    Username: 'root'
+    Password: ''
+    DatabaseName: 'test_db'
+
+Messages:
+  advert-sent: '&aYou have successfully sent an advertisement to chat!'
+  advert-set: '&aYou have changed your advertisement message!'
+  empty-message: '&cYour message cannot be empty.'
+  on-cooldown: '&cYou are currently on cooldown for another %timeleft%!'
+  unset-message: '&cYour advertisement message is unset. Please try /advert set (message)!'
+
+# Announce command
+onAnnounce:
+  Message:
+    - '&6&lADVERTISEMENT'
+    - ''
+    - '%message%'
+    - ''
+    - '&eSent by %player%'
+  Cooldown:
+    Default:
+      Timer: 3600
+    Donator:
+      Permission: csadverts.donator
+      Timer: 1800
+
+
+
+
