@@ -94,6 +94,10 @@ public class advertise implements CommandExecutor {
 
 
 
+            }else if (args[0].equalsIgnoreCase("reload")){
+
+                plugin.rl.onReload(player);
+
             }
 
         }

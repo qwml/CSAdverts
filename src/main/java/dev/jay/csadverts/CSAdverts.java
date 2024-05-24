@@ -3,6 +3,7 @@ package dev.jay.csadverts;
 import dev.jay.csadverts.commands.advertise;
 import dev.jay.csadverts.commands.managers.coolDown;
 import dev.jay.csadverts.commands.managers.timeFormat;
+import dev.jay.csadverts.commands.sub.reload;
 import dev.jay.csadverts.commands.sub.set;
 import dev.jay.csadverts.database.data;
 import dev.jay.csadverts.database.dbq;
@@ -25,6 +26,7 @@ public final class CSAdverts extends JavaPlugin implements Listener {
     public timeFormat tf;
     public coolDown cd;
     public set s;
+    public reload rl;
 
     @Override
     public void onEnable() {
@@ -39,6 +41,7 @@ public final class CSAdverts extends JavaPlugin implements Listener {
         tf = new timeFormat();
         cd = new coolDown(this);
         s = new set(this);
+        rl = new reload(this);
 
         try {
             con.InitDb();
